@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Loading Screen -->
+<div id="loadingScreen" class="screen hidden">
+    <div class="loading-spinner"></div>
+    <p>Loading...</p>
+</div>
+
+<!-- Home Screen - Category Selection -->
+<div id="homeScreen" class="screen">
+    <div class="content-box">
+        <h2>Makan Apa Hari Ni?</h2>
+        <p class="subtitle">Tak payah pening nak fikir makan apa.</p>
+        <p class="subtitle">Biar kami randomkan — sarapan, lunch, atau dinner.</p>
+        
+        <div class="button-container" id="categoryButtons">
+            <!-- Categories will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- Subcategory Screen -->
+<div id="subcategoryScreen" class="screen hidden">
+    <button class="back-button" id="backFromSubcategory">
+        <img src="{{ url_for('static', filename='icons/chevron-back.svg') }}" alt="Back">
+    </button>
+    <div class="content-box">
+        <h3 id="categoryTitle">Pilih Kategori</h3>
+        
+        <div class="button-container" id="subcategoryButtons">
+            <!-- Subcategories will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- Result Screen -->
+<div id="resultScreen" class="screen hidden">
+    <button class="back-button" id="backFromResult">
+        <img src="{{ url_for('static', filename='icons/chevron-back.svg') }}" alt="Back">
+    </button>
+    <div class="result-card">
+        <div class="image-container">
+            <img id="resultImage" src="" alt="Food Image">
+        </div>
+        <div class="result-content">
+            <h3 id="resultName">Food Name</h3>
+            <p id="resultDescription">Description</p>
+            <div class="result-buttons">
+                <button class="action-btn disabled" id="recipeBtn">Lihat Resepi</button>
+                <button class="action-btn primary" id="tryAgainBtn">Try Lagi ?</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Error Screen -->
+<div id="errorScreen" class="screen hidden">
+    <div class="content-box">
+        <h3>Oops! Ada masalah.</h3>
+        <p id="errorMessage">Something went wrong.</p>
+        <button class="action-btn primary" onclick="location.reload()">Mula Semula</button>
+    </div>
+</div>
+{% endblock %}

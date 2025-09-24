@@ -1,0 +1,84 @@
+{
+  "dapur_time": {
+    "sarapan": {
+      "makanan": [
+        {
+          "name": "Nasi Lemak",
+          "image": "NasiLemak.jpg",
+          "description": "Nasi santan dengan sambal, ikan bilis goreng, kacang tanah, timun, dan telur rebus"
+        },
+        {
+          "name": "Roti Kaya",
+          "image": "RotiKaya.jpg",
+          "description": "Roti bakar dengan jem kelapa (kaya) dan mentega, dihidang dengan telur separuh masak"
+        },
+        {
+          "name": "Mee Goreng",
+          "image": "MeeGoreng.jpg",
+          "description": "Mee kuning tumis dengan sayuran, telur, dan sos gelap manis"
+        },
+        {
+          "name": "Nasi Goreng",
+          "image": "NasiGoreng.jpg",
+          "description": "Nasi tumis kuali dengan sos soya, sayuran, dan telur"
+        },
+        {
+          "name": "Roti Telur",
+          "image": "RotiTelur.jpg",
+          "description": "Roti canai goreng dengan telur dipukul, dihidang dengan kari atau gula"
+        },
+        {
+          "name": "Bubur",
+          "image": "Bubur.jpg",
+          "description": "Bubur nasi dengan ayam, halia, dan hiasan"
+        },
+        {
+          "name": "Roti Perancis Gaya Malaysia",
+          "image": "RotiPerancisMalaysia.jpg",
+          "description": "Roti tebal direndam dalam telur, digoreng dan dihidang dengan kaya"
+        },
+        {
+          "name": "Maggi Goreng",
+          "image": "MaggiGoreng.jpg",
+          "description": "Mi segera tumis dengan sayuran, telur, dan sos cili"
+        },
+        {
+          "name": "Telur Bungkus",
+          "image": "TelurBungkus.jpg",
+          "description": "Nasi goreng dibungkus dengan telur dadar nipis"
+        },
+        {
+          "name": "Sandwic Telur",
+          "image": "SandwicTelur.jpg",
+          "description": "Sandwic telur dengan mayonis, timun, dan kadang-kadang sardin"
+        }
+      ]
+    }
+  },
+  "tapau": {
+    "fastfood": {
+      "makanan":[
+        {
+          "name": "KFC",
+          "image": "KFC.png",
+          "description": "Placeholder untuk tapau"
+        }
+      ]
+    },
+    "subcategory_2": {
+      "makanan":[]
+    },
+    "subcategory_3": {
+      "makanan":[]
+    },
+    "subcategory_4": {
+      "makanan":[]
+    },
+    "subcategory_5": {
+      "makanan":[]
+    },
+    "subcategory_6": {
+      "makanan":[]
+    }
+  }
+}
