@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 ### 4. Run the Application
 ```bash
-Flask run
+flask run
 ```
 
 The app will start and be available at: **http://localhost:5000**
