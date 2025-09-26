@@ -1,17 +1,21 @@
 /* CSS Variables */
 :root {
     /* Colors */
-    --color-bg-main: #D9D9D9;
+    --color-bg-orange: #FFD23F;
     --color-bg-cream: #FFF8F0;
-    --color-bg-dark: #B3B3B3;
-    --color-button: #808080;
+    --color-button1: #00A86B;
+    --color-button2: #FF914D;
+    --color-button3: #FFD23F;
+    --color-button4: #3FA9F5;
+    --color-button5: #C68B59;
+    --color-button6: #FF4B3E;
     --color-text: #000000;
     --color-white: #FFFFFF;
     
     /* Font Sizes */
     --h2-size: 3rem;
     --h3-size: 2.25rem;
-    --subheading: 1.25rem;
+    --subheading: 1rem;
     --paragraph: 0.875rem;
     
     /* Spacing */
@@ -19,9 +23,53 @@
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
+    --spacing-xlplus:4rem;
 }
 
-/* Reset & Base Styles */
+@font-face {
+    font-family: 'Nunito';
+    src: url('/static/fonts/Nunito/nunito-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('/static/fonts/Nunito/nunito-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('/static/fonts/Nunito/nunito-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fredoka';
+    src: url('/static/fonts/Fredoka/fredoka-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fredoka';
+    src: url('/static/fonts/Fredoka/fredoka-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fredoka';
+    src: url('/static/fonts/Fredoka/fredoka-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -29,8 +77,8 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    background-color: var(--color-bg-main);
+    font-family: 'Nunito', Arial, sans-serif;
+    background-color: var(--color-bg-orange);
     color: var(--color-text);
     min-height: 100vh;
     display: flex;
@@ -40,7 +88,7 @@ body {
 /* Header */
 header {
     padding: var(--spacing-lg);
-    background-color: var(--color-bg-main);
+    background-color: var(--color-bg-orange);
 }
 
 .logo {
@@ -73,16 +121,18 @@ header {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Content Box */
 .content-box {
     background-color: var(--color-bg-cream);
-    border-radius: 12px;
-    padding: var(--spacing-xl);
+    border: 4px solid var(--color-text);
+    padding: var(--spacing-xlplus);
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Typography */
+h1, h2, h3, .logo {
+    font-family: 'Fredoka', Arial, sans-serif;
+    font-weight: 600;
+}
+
 h2 {
     font-size: var(--h2-size);
     margin-bottom: var(--spacing-lg);
@@ -109,7 +159,7 @@ h3 {
 
 /* Buttons */
 .choice-button, .action-btn {
-    background-color: var(--color-button);
+    background-color: var(--color-button2);
     color: var(--color-white);
     border: none;
     padding: var(--spacing-md) var(--spacing-lg);
@@ -127,7 +177,7 @@ h3 {
 }
 
 .action-btn.primary {
-    background-color: var(--color-button);
+    background-color: var(--color-button2);
 }
 
 .action-btn.disabled {
@@ -146,7 +196,7 @@ h3 {
 .image-container {
     width: 100%;
     height: 400px;
-    background-color: var(--color-bg-dark);
+    background-color: var(--color-bg-cream);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,7 +243,7 @@ h3 {
     width: 48px;
     height: 48px;
     background-color: var(--color-white);
-    border: 2px solid var(--color-button);
+    border: 2px solid var(--color-button2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -204,7 +254,7 @@ h3 {
 }
 
 .back-button:hover {
-    background-color: var(--color-button);
+    background-color: var(--color-button2);
     transform: translateX(-3px);
 }
 
@@ -221,20 +271,57 @@ h3 {
 /* Footer Pagination */
 footer {
     padding: var(--spacing-lg);
-    background-color: var(--color-bg-main);
+    background-color: var(--color-bg-orange);
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
+
+/* Replace the existing .page-btn styles with these social button styles */
 
 .pagination {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
+    
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    /* background-color: var(--color-white); */
+    border: 3px solid var(--color-text); /* Thick stroke for neubrutalism */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* Opaque shadow at 30 degrees */
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);
+    transform: translate(-2px, -2px); /* Offset to show shadow */
+}
+
+.social-btn:hover {
+    /* background-color: var(--color-bg-dark); */
+    transform: translate(0px, 0px); /* Move to shadow position on hover */
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.social-btn img {
+    width: 50px;
+    height: 50px;
+    /* stroke: var(--color-text); */
+    /* stroke-width: 2px; */
+    /* fill: none; Ensure stroke shows instead of fill */
+}
+
+.social-btn:hover img {
+    stroke: var(--color-text);
 }
 
 .page-btn {
     width: 50px;
     height: 50px;
-    background-color: var(--color-button);
+    background-color: var(--color-button2);
     color: var(--color-white);
     border: none;
     border-radius: 8px;
@@ -256,8 +343,8 @@ footer {
 .loading-spinner {
     width: 50px;
     height: 50px;
-    border: 4px solid var(--color-bg-dark);
-    border-top-color: var(--color-button);
+    border: 4px solid var(--color-bg-cream);
+    border-top-color: var(--color-button2);
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: 0 auto var(--spacing-md);
