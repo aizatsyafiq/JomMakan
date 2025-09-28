@@ -34,6 +34,7 @@ async function fetchAPI(endpoint) {
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         showLoading(false);
+        // await new Promise(resolve => setTimeout(resolve, 100));
         return data;
     } catch (error) {
         showLoading(false);
@@ -119,6 +120,10 @@ function goBack() {
 }
 
 function showScreen(screenName) {
+    // test these 2 line 
+    // screens.loading.classList.add('hidden');
+    // screens.loading.offsetHeight;
+
     Object.values(screens).forEach(screen => {
         if (screen) screen.classList.add('hidden');
     });

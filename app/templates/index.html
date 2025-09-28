@@ -22,10 +22,10 @@
 
 <!-- Subcategory Screen -->
 <div id="subcategoryScreen" class="screen hidden">
-    <button class="back-button" id="backFromSubcategory">
-        <img src="{{ url_for('static', filename='icons/chevron-back.svg') }}" alt="Back">
-    </button>
     <div class="content-box">
+        <button class="back-button" id="backFromSubcategory">
+            <img src="{{ url_for('static', filename='icons/close.svg') }}" alt="Back">
+        </button>
         <h3 id="categoryTitle">Pilih Kategori</h3>
         
         <div class="button-container" id="subcategoryButtons">
@@ -37,7 +37,7 @@
 <!-- Result Screen -->
 <div id="resultScreen" class="screen hidden">
     <button class="back-button" id="backFromResult">
-        <img src="{{ url_for('static', filename='icons/chevron-back.svg') }}" alt="Back">
+        <img src="{{ url_for('static', filename='icons/close.svg') }}" alt="Back">
     </button>
     <div class="result-card">
         <div class="image-container">
