@@ -94,6 +94,12 @@ function displayResult(item) {
     img.src = item.image || '/static/images/placeholder.jpg';
     img.alt = item.name;
     
+    // Update title with subcategory display name
+    const subcategoryDisplay = appState.selectedSubcategory.replace('_', ' ').split(' ').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    document.getElementById('resultTitle').textContent = subcategoryDisplay;
+    
     document.getElementById('resultName').textContent = item.name;
     document.getElementById('resultDescription').textContent = item.description || '';
     
@@ -120,16 +126,20 @@ function goBack() {
 }
 
 function showScreen(screenName) {
-    // test these 2 line 
-    // screens.loading.classList.add('hidden');
-    // screens.loading.offsetHeight;
-
     Object.values(screens).forEach(screen => {
         if (screen) screen.classList.add('hidden');
     });
     if (screens[screenName]) {
         screens[screenName].classList.remove('hidden');
         appState.currentScreen = screenName;
+    }
+
+    // test
+    const container = document.querySelector('.container');
+    if (screenName === 'result') {
+        container.classList.add('result-active');
+    } else {
+        container.classList.remove('result-active');
     }
 }
 

@@ -36,20 +36,22 @@
 
 <!-- Result Screen -->
 <div id="resultScreen" class="screen hidden">
-    <button class="back-button" id="backFromResult">
-        <img src="{{ url_for('static', filename='icons/close.svg') }}" alt="Back">
-    </button>
-    <div class="result-card">
-        <div class="image-container">
-            <img id="resultImage" src="" alt="Food Image">
-        </div>
-        <div class="result-content">
-            <h3 id="resultName">Food Name</h3>
-            <p id="resultDescription">Description</p>
-            <div class="result-buttons">
-                <button class="action-btn disabled" id="recipeBtn">Lihat Resepi</button>
-                <button class="action-btn primary" id="tryAgainBtn">Try Lagi ?</button>
+    <div class="result-container">
+        <h3 id="resultTitle">Sarapan</h3>
+        <div class="result-box">
+            <div class="result-image-container">
+                <img id="resultImage" src="" alt="Food Image">
             </div>
+            <div class="result-text">
+                <h4 id="resultName">Food Name</h4>
+                <p id="resultDescription">Description</p>
+                <a href="#" class="recipe-btn disabled" id="recipeBtn">Lihat Resepi</a>
+            </div>
+        </div>
+        
+        <div class="result-buttons">
+            <button class="choice-button" id="backFromResult">Kembali</button>
+            <button class="choice-button" id="tryAgainBtn">Try Lagi</button>
         </div>
     </div>
 </div>
