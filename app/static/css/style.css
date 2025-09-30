@@ -123,6 +123,10 @@ header {
     display: none;
 }
 
+#errorScreen .content-box > * + * {
+    margin-top: var(--spacing-lg);
+}
+
 #loadingScreen {
     position: fixed;
     top: 0;

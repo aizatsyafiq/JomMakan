@@ -99,9 +99,15 @@ function displayResult(item) {
         word.charAt(0).toUpperCase() + word.slice(1)
     ).join(' ');
     document.getElementById('resultTitle').textContent = subcategoryDisplay;
-    
     document.getElementById('resultName').textContent = item.name;
     document.getElementById('resultDescription').textContent = item.description || '';
+
+    // Youtube dynamic href
+    const recipeBtn = document.getElementById('recipeBtn');
+    const searchQuery = `Cara buat ${item.name}`;
+    const encodedQuery = encodeURIComponent(searchQuery);
+    recipeBtn.href = `https://www.youtube.com/results?search_query=${encodedQuery}`;
+    recipeBtn.target = '_blank';
     
     showScreen('result');
 }
