@@ -5,12 +5,12 @@
         {
           "name": "Nasi Lemak",
           "image": "NasiLemak.jpg",
-          "description": "Nasi santan dengan sambal, ikan bilis goreng, kacang tanah, timun, dan telur rebus"
+          "description": "Hidangan kebangsaan Malaysia: nasi santan dengan sambal, ikan bilis, kacang tanah, timun dan telur"
         },
         {
-          "name": "Roti Kaya",
-          "image": "RotiKaya.jpg",
-          "description": "Roti bakar dengan jem kelapa (kaya) dan mentega, dihidang dengan telur separuh masak"
+          "name": "Roti Bakar",
+          "image": "RotiBakar.jpg",
+          "description": "Roti bakar boleh dimakan bersama mentega, jem, telur separuh masak atau dicicah kopi"
         },
         {
           "name": "Mee Goreng",
@@ -23,19 +23,9 @@
           "description": "Nasi tumis kuali dengan sos soya, sayuran, dan telur"
         },
         {
-          "name": "Roti Telur",
-          "image": "RotiTelur.jpg",
-          "description": "Roti canai goreng dengan telur dipukul, dihidang dengan kari atau gula"
-        },
-        {
           "name": "Bubur",
           "image": "Bubur.jpg",
-          "description": "Bubur nasi dengan ayam, halia, dan hiasan"
-        },
-        {
-          "name": "Roti Perancis Gaya Malaysia",
-          "image": "RotiPerancisMalaysia.jpg",
-          "description": "Roti tebal direndam dalam telur, digoreng dan dihidang dengan kaya"
+          "description": "Bubur nasi lembut dengan ayam cincang, halia, bawang goreng dan sayuran sebagai sarapan berkhasiat"
         },
         {
           "name": "Maggi Goreng",
@@ -51,34 +41,302 @@
           "name": "Sandwic Telur",
           "image": "SandwicTelur.jpg",
           "description": "Sandwic telur dengan mayonis, timun, dan kadang-kadang sardin"
+        },
+        {
+          "name": "Murtabak",
+          "image": "Murtabak.jpg",
+          "description": "Roti berinti daging cincang, telur, dan bawang, dihidang dengan kari atau acar bawang"
+        },
+        {
+          "name": "Laksa",
+          "image": "Laksa.jpg",
+          "description": "Sup mi pedas dengan mi beras tebal dalam kuah santan atau asam jawa"
+        }
+      ]
+    },
+    "makan_tengahari": {
+      "makanan": [
+        {
+          "name": "Ayam Masak Merah",
+          "image": "AyamMasakMerah.jpg",
+          "description": "Ayam direbus dalam sos cili kering, bawang dan tomato"
+        },
+        {
+          "name": "Rendang Daging",
+          "image": "RendangDaging.jpg",
+          "description": "Daging masak perlahan dengan santan dan rempah ratus, hidangan tradisional untuk majlis perayaan"
+        },
+        {
+          "name": "Ikan Masak Asam Pedas",
+          "image": "IkanAsamPedas.jpg",
+          "description": "Ikan masak dengan rempah pedas dan asam jawa, memberikan rasa masam manis yang sedap"
+        },
+        {
+          "name": "Gulai Ayam",
+          "image": "GulaiAyam.jpg",
+          "description": "Gulai berkuah santan dengan rempah kunyit, ketumbar dan cili"
+        },
+        {
+          "name": "Sambal Udang",
+          "image": "SambalUdang.jpg",
+          "description": "Udang tumis dengan sambal cili, belacan dan asam jawa, rasa pedas manis yang menggugah selera"
+        },
+        {
+          "name": "Ayam Percik",
+          "image": "AyamPercik.jpg",
+          "description": "Ayam bakar dengan kuah santan berempah"
+        },
+        {
+          "name": "Kari Ikan",
+          "image": "KariIkan.jpg",
+          "description": "Ikan masak kari dengan santan, kunyit dan rempah"
+        },
+        {
+          "name": "Daging Masak Kicap",
+          "image": "DagingKicap.jpg",
+          "description": "Daging lembu masak dengan kicap manis, bawang dan rempah"
+        },
+        {
+          "name": "Sayur Campur",
+          "image": "SayurCampur.jpg",
+          "description": "Pelbagai sayuran tumis dengan belacan, tauhu dan tempe, sihat dan berkhasiat"
+        },
+        {
+          "name": "Ikan Bakar",
+          "image": "IkanBakar.jpg",
+          "description": "Ikan segar dibakar dengan rempah dan daun pisang, dihidang dengan sambal dan ulam"
+        }
+      ]
+    },
+    "makan_malam": {
+      "makanan": [
+        {
+          "name": "Satay",
+          "image": "Satay.jpg",
+          "description": "Daging bakar dengan cucuk lidi, dihidang dengan kuah kacang pedas dan ketupat"
+        },
+        {
+          "name": "Nasi Kerabu",
+          "image": "NasiKerabu.jpg",
+          "description": "Nasi biru dari bunga telang dengan ulam, keropok, ikan dan sambal"
+        },
+        {
+          "name": "Asam Laksa",
+          "image": "AsamLaksa.jpg",
+          "description": "Mi dalam kuah asam pedas dengan ikan, nanas dan ulam"
+        },
+        {
+          "name": "Char Kuey Teow",
+          "image": "CharKueyTeow.jpg",
+          "description": "Kuey teow goreng dengan taugeh, udang, telur dan kicap"
+        },
+        {
+          "name": "Nasi Biryani",
+          "image": "NasiBiryani.jpg",
+          "description": "Nasi berempah dengan daging kambing atau ayam, kentang dan telur rebus"
+        },
+        {
+          "name": "Mee Bandung",
+          "image": "MeeBandung.jpg",
+          "description": "Mi dalam kuah pedas dengan udang, sotong, tahu goreng dan telur"
+        },
+        {
+          "name": "Sup Tulang",
+          "image": "SupTulang.jpg",
+          "description": "Sup tulang dengan rempah dan sayuran, dimakan dengan roti atau nasi"
+        },
+        {
+          "name": "Ikan Patin Masak Tempoyak",
+          "image": "IkanTempoyak.jpg",
+          "description": "Ikan patin masak dengan tempoyak"
+        },
+        {
+          "name": "Ayam Penyet",
+          "image": "AyamPenyet.jpg",
+          "description": "Ayam goreng yang dihempap dengan sambal pedas"
+        },
+        {
+          "name": "Tom Yam",
+          "image": "TomYam.jpg",
+          "description": "Sup Thai pedas masam dengan udang, cendawan dan rempah"
         }
       ]
     }
   },
   "tapau": {
-    "fastfood": {
-      "makanan":[
+    "nasi": {
+      "makanan": [
         {
-          "name": "KFC",
-          "image": "KFC.png",
-          "description": "Placeholder untuk tapau"
+          "name": "Nasi Lemak",
+          "image": "NasiLemak.jpg",
+          "description": "Nasi santan dengan sambal, ikan bilis, kacang, telur dan timun - hidangan kebangsaan yang mudah dibawa"
+        },
+        {
+          "name": "Nasi Kandar",
+          "image": "NasiKandar.jpg",
+          "description": "Nasi putih dengan pelbagai lauk kari, ayam, daging dan sayur - popular di Pulau Pinang"
+        },
+        {
+          "name": "Nasi Ayam",
+          "image": "NasiAyam.jpg",
+          "description": "Nasi wangi dengan ayam rebus atau goreng, sup dan sos cili - terinspirasi dari Hainan"
+        },
+        {
+          "name": "Nasi Goreng",
+          "image": "NasiGoreng.jpg",
+          "description": "Nasi goreng dengan ikan bilis, telur dan sayuran - rasa tradisional kampung yang sedap"
+        },
+        {
+          "name": "Nasi Briyani",
+          "image": "NasiBriyani.jpg",
+          "description": "Nasi berempah dengan ayam atau kambing, kentang dan telur rebus - warisan kuliner India Muslim"
         }
       ]
     },
-    "subcategory_2": {
-      "makanan":[]
+    "mee": {
+      "makanan": [
+        {
+          "name": "Char Kuey Teow",
+          "image": "CharKueyTeow.jpg",
+          "description": "Kuey teow goreng dengan udang, taugeh dan kicap - juadah jalanan paling popular"
+        },
+        {
+          "name": "Laksa Johor",
+          "image": "LaksaJohor.jpg",
+          "description": "Spaghetti tebal dengan kuah ikan kental, timun dan daun kesum - unik dari selatan"
+        },
+        {
+          "name": "Wan Tan Mee",
+          "image": "WanTanMee.jpg",
+          "description": "Mee kuning dengan char siu, wan tan goreng dan sayur - gabungan sempurna tekstur"
+        },
+        {
+          "name": "Mee Goreng Mamak",
+          "image": "MeeGorengMamak.jpg",
+          "description": "Mee kuning tumis dengan tauhu, kentang, sayur dan telur - klasik dari kedai mamak"
+        },
+        {
+          "name": "Bihun Goreng",
+          "image": "BihunGoreng.jpg",
+          "description": "Bihun tumis dengan sayuran, telur dan udang - ringan dan mengenyangkan"
+        }
+      ]
     },
-    "subcategory_3": {
-      "makanan":[]
+    "roti_wrap": {
+      "makanan": [
+        {
+          "name": "Roti Canai",
+          "image": "RotiCanai.jpg",
+          "description": "Roti nipis rangup dengan kari atau dhal - sarapan mamak kegemaran rakyat Malaysia"
+        },
+        {
+          "name": "Burger",
+          "image": "Burger.jpg",
+          "description": "Burger daging dibungkus telur dengan sos lada hitam - ikon makanan jalanan Malaysia"
+        },
+        {
+          "name": "Sandwic Ayam",
+          "image": "SandwicAyam.jpg",
+          "description": "Roti dengan ayam, salad, mayonis dan sos - mudah dimakan, mengenyangkan"
+        },
+        {
+          "name": "Wrap Ayam",
+          "image": "WrapAyam.jpg",
+          "description": "Tortilla digulung dengan ayam, sayuran dan sos - pilihan sihat yang praktikal"
+        },
+        {
+          "name": "Shawarma",
+          "image": "Shawarma.jpg",
+          "description": "Roti pita digulung dengan daging panggang, salad dan sos - hidangan Timur Tengah yang popular"
+        }
+      ]
     },
-    "subcategory_4": {
-      "makanan":[]
+    "sepinggan": {
+      "makanan": [
+        {
+          "name": "Nasi Lemak Kukus",
+          "image": "NasiLemakKukus.jpg",
+          "description": "Nasi lemak dengan lauk kukus sihat seperti ayam, ikan dan sayuran - pilihan lebih ringan"
+        },
+        {
+          "name": "Sup Mee",
+          "image": "SupMee.jpg",
+          "description": "Mee kuning dalam sup dengan sayuran, ayam dan telur - menghangatkan badan"
+        },
+        {
+          "name": "Tom Yam Campur",
+          "image": "TomYamCampur.jpg",
+          "description": "Sup Thai pedas masam dengan seafood, cendawan dan serai - menyegarkan tekak"
+        },
+        {
+          "name": "Mee Kari",
+          "image": "MeeKari.jpg",
+          "description": "Mee kuning dalam kuah kari santan dengan tauhu pok - comfort food Malaysia"
+        },
+        {
+          "name": "Lontong",
+          "image": "Lontong.jpg",
+          "description": "Nasi himpit dengan sayur lodeh santan, tempe dan sambal - sarapan Jawa yang lazat"
+        }
+      ]
     },
-    "subcategory_5": {
-      "makanan":[]
+    "bakar_goreng": {
+      "makanan": [
+        {
+          "name": "Satay Ayam",
+          "image": "SatayAyam.jpg",
+          "description": "Daging ayam bakar dalam cucuk dengan kuah kacang dan ketupat - wajib ada bawang dan timun"
+        },
+        {
+          "name": "Ayam Goreng Berempah",
+          "image": "AyamGorengBerempah.jpg",
+          "description": "Ayam goreng dengan kunyit dan rempah ratus - rangup diluar, lembut didalam"
+        },
+        {
+          "name": "Ikan Bakar",
+          "image": "IkanBakar.jpg",
+          "description": "Ikan segar dibakar dengan sambal dan air asam - aroma daun pisang yang menggoda"
+        },
+        {
+          "name": "Ayam Percik",
+          "image": "AyamPercik.jpg",
+          "description": "Ayam bakar dengan kuah santan berempah - spesialiti Terengganu yang manis pedas"
+        },
+        {
+          "name": "Sotong Goreng Tepung",
+          "image": "SotongGorengTepung.jpg",
+          "description": "Sotong digoreng dengan tepung rangup - sedap celup sos cili atau mayonis"
+        }
+      ]
     },
-    "subcategory_6": {
-      "makanan":[]
+    "ringan": {
+      "makanan": [
+        {
+          "name": "Pizza",
+          "image": "Pizza.jpg",
+          "description": "Pizza dengan pelbagai topping cheese, ayam, daging atau seafood - mudah dikongsi"
+        },
+        {
+          "name": "ABC",
+          "image": "ABC.jpg",
+          "description": "Ais batu campur dengan sirap, susu, jagung dan kacang - minuman sejuk yang popular"
+        },
+        {
+          "name": "Kentang Goreng",
+          "image": "KentangGoreng.jpg",
+          "description": "Kentang goreng rangup dengan garam - snek atau hidangan sampingan yang disukai ramai"
+        },
+        {
+          "name": "Cendol",
+          "image": "Cendol.jpg",
+          "description": "Ais campur santan, gula Melaka dan jeli hijau pandan - pencuci mulut sejuk yang menyegarkan"
+        },
+        {
+          "name": "Kuih Muih",
+          "image": "KuihMuih.jpg",
+          "description": "Pelbagai kuih tradisional seperti kuih talam, seri muka atau onde-onde - manis dan wangi"
+        }
+      ]
     }
   }
 }
