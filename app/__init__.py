@@ -2,10 +2,26 @@ from flask import Flask, render_template, jsonify
 import json
 import random
 import os
+from .config import config
 
-def create_app():
+def create_app(config_name=None):
     app = Flask(__name__)
     
+    if config_name is None:
+        config_name = os.environ.get('CONFIG_ENV','default')
+
+    # prevent key error
+    config_class = config.get(config_name, config['default'])
+    app.config.from_object(config_class)
+
+    # check which config loaded
+    import logging
+    logging.basicConfig(level=logging.INFO)
+    logging.info("Loaded config: %s (DEBUG=%s)", config_name, app.config['DEBUG'])
+
+    if config_name == 'production' and not app.config.get('SECRET_KEY'):
+        raise RuntimeError("SECRET_KEY must be set in production")
+
     # Load food data
     def load_food_data():
         json_path = os.path.join(app.root_path, 'data', 'foodlist.json')
