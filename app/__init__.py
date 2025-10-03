@@ -1,8 +1,13 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, url_for
 import json
 import random
 import os
+import time
 from .config import config
+
+_FOOD_DATA_CACHE = None
+_CACHE_TIMESTAMP = 0
+CACHE_TTL = 300 # 5 minutes
 
 def create_app(config_name=None):
     app = Flask(__name__)
@@ -22,11 +27,17 @@ def create_app(config_name=None):
     if config_name == 'production' and not app.config.get('SECRET_KEY'):
         raise RuntimeError("SECRET_KEY must be set in production")
 
-    # Load food data
     def load_food_data():
-        json_path = os.path.join(app.root_path, 'data', 'foodlist.json')
-        with open(json_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        """Load food list once, time-based cache"""
+        global _FOOD_DATA_CACHE, _CACHE_TIMESTAMP
+        current_time = time.time()
+        if _FOOD_DATA_CACHE is None or (current_time - _CACHE_TIMESTAMP) > CACHE_TTL:
+            json_path = os.path.join(app.root_path, 'data', 'foodlist.json')
+            with open(json_path, 'r', encoding='utf-8') as f:
+                _FOOD_DATA_CACHE = json.load(f)
+            _CACHE_TIMESTAMP = current_time
+            app.logger.info(f"Food data cache refreshed at {current_time}")
+        return _FOOD_DATA_CACHE
     
     @app.route('/')
     def index():
@@ -60,17 +71,21 @@ def create_app(config_name=None):
     def get_random_item(category, subcategory):
         data = load_food_data()
         try:
-            # Look for 'makanan' key since that's what your JSON uses
             items = data[category][subcategory].get('makanan', [])
             
             if items:
-                random_item = random.choice(items)
-                # Check image path if needed
-                if random_item.get('image'):
-                    if not random_item['image'].startswith('/'):
-                        random_item['image'] = f"/static/images/food/{random_item['image']}"
-                return jsonify({'item': random_item, 'category': category, 'subcategory': subcategory})
-            return jsonify({'error': 'No items found'}), 404
+                source_item = random.choice(items)
+                random_item = {
+                    'name': source_item['name'],
+                    'description': source_item.get('descrition',''),
+                    'image': url_for('static', filename=f"images/{source_item['image']}")
+                }
+                return jsonify({
+                    'item': random_item,
+                    'category': category,
+                    'subcategory': subcategory
+                })
+            return jsonify({'error':'No items found'}), 404
         except KeyError:
-            return jsonify({'error': 'Invalid category or subcategory'}), 404
+            return jsonify({'error':'Invalid category or subcategory'}), 404
     return app
