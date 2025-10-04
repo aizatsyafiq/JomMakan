@@ -88,3 +88,12 @@ node_modules/
 npm-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Ruff cache
+.ruff_cache/
+
+# pytest cache
+.pytest_cache/
+
+# mypy cache
+.mypy_cache/
