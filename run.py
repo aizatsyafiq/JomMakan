@@ -1,8 +1,9 @@
 import os
+from typing import Optional
 
 from app import create_app
 
-config_name = os.environ.get("CONFIG_ENV", "development")
+config_name: Optional[str] = os.environ.get("CONFIG_ENV", "development")
 app = create_app(config_name)
 
 if __name__ == "__main__":
