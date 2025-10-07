@@ -439,18 +439,48 @@ footer {
         --h2-size: 2rem;
         --h3-size: 1.5rem;
     }
+
+    header {
+        text-align: center;
+        max-height: 60px;
+    }
+
+    footer {
+        justify-content: center;
+        max-height: none;  /* changed - remove max-height restriction */
+        padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-xl);  /* increased all padding */
+        margin-bottom: 20px;  /* new - adds space from bottom of viewport */
+    }
     
     .content-box {
         padding: var(--spacing-lg);
+        text-align: center;
+        height: auto;
+        aspect-ratio: auto;
+        max-width: 100%;
+        width: 100%;
     }
     
+    /* stack buttons vertically */
+    .button-container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: center;
+    }
+    
+    /* full width buttons */
+    .choice-button {
+        width: 100%;
+        max-width: 280px;
+    }
+
     .image-container {
         height: 250px;
     }
 
     .back-button {
         top: 1rem;
-        left: 1rem;
+        right: 1rem;
         width: 40px;
         height: 40px;
     }
@@ -476,5 +506,16 @@ footer {
     
     .result-buttons {
         flex-direction: column;
+    }
+
+    .social-btn {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .social-btn img {
+        width: 40px;
+        height: 40px;
     }
 }
