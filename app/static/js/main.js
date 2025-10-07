@@ -104,10 +104,15 @@ function displayResult(item) {
 
     // Youtube dynamic href
     const recipeBtn = document.getElementById('recipeBtn');
-    const searchQuery = `Cara buat ${item.name}`;
-    const encodedQuery = encodeURIComponent(searchQuery);
-    recipeBtn.href = `https://www.youtube.com/results?search_query=${encodedQuery}`;
-    recipeBtn.target = '_blank';
+    if (appState.selectedCategory == 'tapau'){
+        recipeBtn.style.display = 'none';
+    } else {
+        recipeBtn.style.display = 'inline-block';
+        const searchQuery = `Cara buat ${item.name}`;
+        const encodedQuery = encodeURIComponent(searchQuery);
+        recipeBtn.href = `https://www.youtube.com/results?search_query=${encodedQuery}`;
+        recipeBtn.target = '_blank';    
+    }
     
     showScreen('result');
 }
