@@ -13,15 +13,15 @@ _CACHE_TIMESTAMP: float = 0.0
 CACHE_TTL = 300  # 5 minutes
 
 
-class ApaSedapFlask(Flask):
+class JomMakanFlask(Flask):
     """Custom Flask app with food data loader."""
 
     food_data_loader: Callable[[], Dict[str, Any]]
 
 
-def create_app(config_name: Optional[str] = None) -> ApaSedapFlask:
+def create_app(config_name: Optional[str] = None) -> JomMakanFlask:
     """Flask application factory."""
-    app = ApaSedapFlask(__name__)
+    app = JomMakanFlask(__name__)
 
     if config_name is None:
         config_name = os.environ.get("CONFIG_ENV", "default")

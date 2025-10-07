@@ -1,4 +1,4 @@
-# ApaSedap
+# JomMakan
 
 A simple food decision helper web app that randomly selects what you should eat today.
 
@@ -10,8 +10,8 @@ A simple food decision helper web app that randomly selects what you should eat 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/ApaSedap.git
-cd ApaSedap
+git clone https://github.com/yourusername/JomMakan.git
+cd JomMakan
 ```
 
 ### 2. Set Up Virtual Environment
@@ -50,7 +50,7 @@ The app will start and be available at: **http://localhost:5000**
 
 ### 6. Verify Installation
 Open your browser and navigate to `http://localhost:5000`. You should see:
-- The ApaSedap home screen with "Makan Apa Hari Ni?" heading
+- The JomMakan home screen with "Makan Apa Hari Ni?" heading
 - Two category buttons: "Dapur Time" and "Tapau"
 - Click through to test the random food selection
 

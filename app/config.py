@@ -24,6 +24,7 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     DEBUG: bool = False
+    PREFERRED_URL_SCHEME = "https"
 
 
 config: Dict[str, Type[Config]] = {
