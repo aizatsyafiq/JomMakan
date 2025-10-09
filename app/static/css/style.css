@@ -443,13 +443,14 @@ footer {
     header {
         text-align: center;
         max-height: 60px;
+        padding: var(--spacing-md);
     }
 
     footer {
         justify-content: center;
-        max-height: none;  /* changed - remove max-height restriction */
-        padding: var(--spacing-lg) var(--spacing-xl) var(--spacing-xl);  /* increased all padding */
-        margin-bottom: 20px;  /* new - adds space from bottom of viewport */
+        max-height: none;
+        padding: var(--spacing-md);
+        /* margin-bottom: 20px; */
     }
     
     .content-box {
@@ -491,9 +492,13 @@ footer {
     }
 
     .result-container {
-        padding: var(--spacing-lg);
+        padding: var(--spacing-md);
         height: auto;
         aspect-ratio: auto;
+    }
+
+    .result-box {
+        width: 100%;
     }
 
     .result-image-container {
@@ -501,11 +506,12 @@ footer {
     }
     
     .result-text {
-        padding: var(--spacing-md);
+        padding-top: var(--spacing-md);
     }
     
     .result-buttons {
         flex-direction: column;
+        gap: var(--spacing-md);
     }
 
     .social-btn {
@@ -517,5 +523,11 @@ footer {
     .social-btn img {
         width: 40px;
         height: 40px;
+    }
+}
+
+@media (max-width: 767px) and (max-height: 670px) {
+    footer {
+        display: none;
     }
 }
