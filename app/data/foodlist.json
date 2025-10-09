@@ -283,9 +283,9 @@
     "bakar_goreng": {
       "makanan": [
         {
-          "name": "Satay Ayam",
-          "image": "SatayAyam.jpg",
-          "description": "Daging ayam bakar dalam cucuk dengan kuah kacang dan ketupat - wajib ada bawang dan timun"
+          "name": "Satay",
+          "image": "Satay.jpg",
+          "description": "Daging bakar dalam cucuk dengan kuah kacang dan ketupat - wajib ada bawang dan timun"
         },
         {
           "name": "Ayam Goreng Berempah",
