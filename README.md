@@ -40,6 +40,10 @@ cp app/.env.example app/.env
 ```bash
 pip install -r requirements.txt
 ```
+or for development
+```bash
+pip install -r requirements-dev.txt
+```
 
 ### 5. Run the Application
 ```bash
