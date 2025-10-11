@@ -6,6 +6,16 @@
     <title>JomMakan! - {% block title %}Makan Apa Hari Ni?{% endblock %}</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- For Google search -->
+    <meta name="description" content="Random Malaysian food picker">
+
+    <!-- For social shares (WhatsApp, Facebook, Twitter) -->
+    <meta property="og:title" content="JomMakan - Makan Apa Hari Ni?">
+    <meta property="og:description" content="Tak payah pening - biar kami randomkan!">
+    <meta property="og:image" content="https://jommakan.app/static/og-image.jpg">
+    <meta property="og:url" content="https://jommakan.app">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <header>

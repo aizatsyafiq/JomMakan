@@ -89,3 +89,8 @@ def get_random_item(category: str, subcategory: str) -> Tuple[Response, int]:
         return jsonify({"error": "No items found"}), 404
     except KeyError:
         return jsonify({"error": "Invalid category or subcategory"}), 404
+
+
+@main.route("/sitemap.xml")
+def sitemap():
+    return render_template("sitemap.xml"), 200, {"Content-Type": "application/xml"}
