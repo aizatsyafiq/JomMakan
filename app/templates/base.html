@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JomMakan! - {% block title %}Makan Apa Hari Ni?{% endblock %}</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/favicon-96x96.png') }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='icons/favicon.svg') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icons/favicon.ico') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='icons/apple-touch-icon-180x180.png') }}" />
+    <meta name="apple-mobile-web-app-title" content="JomMakan!" />
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}" />
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <!-- For Google search -->
