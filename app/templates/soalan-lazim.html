@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Soalan Lazim - JomMakan!{% endblock %}
+
+{% block content %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.container').classList.add('faq-active');
+        document.body.classList.add('faq-page-active');
+    });
+</script>
+<div class="faq-page">
+    <div class="faq-container">
+        <h2>Soalan Lazim</h2>
+
+        <div class="faq-grid">
+            <div class="faq-box">
+                <h3 class="faq-question">Apa benda JomMakan ni?</h3>
+                <p class="faq-answer">JomMakan ialah web app untuk bantu korang pilih makanan. Tak payah pening nak fikir makan apa , kami randomkan.</p>
+            </div>
+
+            <div class="faq-box">
+                <h3 class="faq-question">Free ke guna ni?</h3>
+                <p class="faq-answer">JomMakan ialah web app untuk bantu korang pilih makanan. Tak payah pening nak fikir makan apa , kami randomkan.</p>
+            </div>
+
+            <div class="faq-box">
+                <h3 class="faq-question">Macam mana nak guna?</h3>
+                <p class="faq-answer">Senang je:<br>1. Tekan kategori → Dapur Time (masak sendiri) atau Tapau Kedai (beli luar).<br>2. Pilih jenis makan → sarapan, makan tengahari, makan malam.<br>3. Tekan randomizer → kami bagi cadangan terus.</p>
+            </div>
+
+            <div class="faq-box">
+                <h3 class="faq-question">Akan ada penambahbaikan ke app ni nanti?</h3>
+                <p class="faq-answer">Ya, dalam masa akan datang mungkin ada:<br>- Save "favourite dishes"<br>- Share dengan kawan<br>- Cari resepi untuk Dapur Time</p>
+            </div>
+
+            <div class="faq-box">
+                <h3 class="faq-question">Kalau saya tak suka cadangan tu macam mana?</h3>
+                <p class="faq-answer">Takpe — tekan je butang Cuba Lagi. Sistem akan bagi cadangan baru.</p>
+            </div>
+        </div>
+
+        <div class="faq-back-button-container">
+            <a href="{{ url_for('main.index') }}" class="choice-button faq-back-button">Kembali</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

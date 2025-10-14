@@ -22,9 +22,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Initialize Navigation
 function initializeApp() {
-    document.getElementById('backFromSubcategory').addEventListener('click', goBack);
-    document.getElementById('backFromResult').addEventListener('click', goBack);
-    document.getElementById('tryAgainBtn').addEventListener('click', reRandomize);
+    const backFromSubcategory = document.getElementById('backFromSubcategory');
+    const backFromResult = document.getElementById('backFromResult');
+    const tryAgainBtn = document.getElementById('tryAgainBtn');
+
+    if (backFromSubcategory) {
+        backFromSubcategory.addEventListener('click', goBack);
+    }
+    if (backFromResult) {
+        backFromResult.addEventListener('click', goBack);
+    }
+    if (tryAgainBtn) {
+        tryAgainBtn.addEventListener('click', reRandomize);
+    }
 }
 
 async function fetchAPI(endpoint) {
@@ -48,6 +58,8 @@ async function loadCategories() {
     const data = await fetchAPI('/api/categories');
     if (data && data.categories) {
         const container = document.getElementById('categoryButtons');
+        if (!container) return;
+
         container.innerHTML = '';
         data.categories.forEach(category => {
             const button = createButton(category.display, () => selectCategory(category.id));
@@ -155,6 +167,8 @@ function showScreen(screenName) {
 }
 
 function showLoading(show) {
+    if (!screens.loading) return;
+
     if (show) {
         screens.loading.classList.remove('hidden');
     } else {
@@ -163,7 +177,10 @@ function showLoading(show) {
 }
 
 function showError(message) {
-    document.getElementById('errorMessage').textContent = message;
+    const errorMessage = document.getElementById('errorMessage');
+    if (errorMessage) {
+        errorMessage.textContent = message;
+    }
     showScreen('error');
 }
 

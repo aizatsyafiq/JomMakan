@@ -91,6 +91,12 @@ def get_random_item(category: str, subcategory: str) -> Tuple[Response, int]:
         return jsonify({"error": "Invalid category or subcategory"}), 404
 
 
+@main.route("/soalan-lazim")
+def soalan_lazim() -> str:
+    """Render FAQ (Frequently Asked Questions) page."""
+    return render_template("soalan-lazim.html")
+
+
 @main.route("/sitemap.xml")
 def sitemap():
     return render_template("sitemap.xml"), 200, {"Content-Type": "application/xml"}
