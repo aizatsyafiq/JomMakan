@@ -348,7 +348,15 @@ footer {
     padding: var(--spacing-md) var(--spacing-xl) var(--spacing-lg);
     background-color: var(--color-bg-orange);
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: var(--subheading);
+    opacity: 0.8;
 }
 
 .pagination {
@@ -447,10 +455,16 @@ footer {
     }
 
     footer {
+        flex-direction: column-reverse;
         justify-content: center;
+        gap: var(--spacing-md);
         max-height: none;
         padding: var(--spacing-md);
-        /* margin-bottom: 20px; */
+        margin-bottom: 10px;
+    }
+
+    .footer-text {
+        text-align: center;
     }
     
     .content-box {
@@ -470,19 +484,10 @@ footer {
         min-width: 100px;
         padding: var(--spacing-sm);
     }
-    
-    /* stack buttons vertically */
-    /* .button-container {
-        flex-direction: column;
-        gap: var(--spacing-md);
-        align-items: center;
-    } */
-    
-    /* full width buttons */
-    /* .choice-button {
-        width: 100%;
-        max-width: 280px;
-    } */
+
+    .result-buttons .choice-button {  /* new - targets only result page buttons */
+        min-width: 120px;  /* adjust this value (try 120px, 130px, or up to 140px) */
+    }
 
     .image-container {
         height: 250px;
@@ -520,7 +525,7 @@ footer {
     
     .result-buttons {
         flex-direction: row;
-        gap: var(--spacing-md);
+        gap: var(--spacing-lg);
     }
 
     .social-btn {
