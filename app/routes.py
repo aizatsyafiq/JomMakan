@@ -100,3 +100,17 @@ def soalan_lazim() -> str:
 @main.route("/sitemap.xml")
 def sitemap():
     return render_template("sitemap.xml"), 200, {"Content-Type": "application/xml"}
+
+
+@main.app_errorhandler(404)
+def not_found(e):
+    return render_template("index.html"), 404
+
+
+@main.app_errorhandler(500)
+def server_error(e):
+    # Log the error first
+    from flask import current_app
+
+    current_app.logger.error(f"Server Error: {e}")
+    return render_template("index.html"), 500

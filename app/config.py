@@ -24,7 +24,10 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     DEBUG: bool = False
+    TESTING: bool = False
     PREFERRED_URL_SCHEME = "https"
+    LOG_TO_STDOUT: bool = False
+    LOG_LEVEL = "INFO"
 
 
 config: Dict[str, Type[Config]] = {
