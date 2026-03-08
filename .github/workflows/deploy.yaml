@@ -20,7 +20,5 @@ jobs:
           script: |
             cd ~/JomMakan
             git pull origin main
-            source venv/bin/activate
-            pip install -r requirements.txt --quiet
             sudo systemctl restart jommakan
             sudo systemctl status jommakan --no-pager
