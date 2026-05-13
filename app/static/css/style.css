@@ -698,3 +698,107 @@ footer {
         grid-column: 1;
     }
 }
+
+/* Pricing & Policy Page */
+.policy-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 var(--spacing-lg);
+}
+
+.policy-box {
+    width: 100%;
+    max-width: 720px;
+    padding: var(--spacing-lg);
+    aspect-ratio: auto;
+    text-align: left;
+    align-items: stretch;
+}
+
+.policy-scroll {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 65vh;
+    padding-right: 8px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.policy-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.policy-scroll h1,
+.policy-scroll h2 {
+    font-family: 'Fredoka', Arial, sans-serif;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.policy-scroll h3,
+.policy-scroll h4 {
+    font-family: 'Fredoka', Arial, sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.policy-scroll p,
+.policy-scroll li {
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: var(--paragraph);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.policy-scroll ul {
+    padding-left: 1.5rem;
+}
+
+.policy-scroll hr {
+    border: none;
+    border-top: 2px solid var(--color-text);
+    margin: 1.5rem 0;
+    opacity: 0.2;
+}
+
+.policy-scroll a {
+    color: var(--color-text);
+}
+
+/* Table wrapper handles horizontal overflow on narrow screens */
+.policy-scroll table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
+.policy-scroll th,
+.policy-scroll td {
+    border: 1px solid var(--color-text);
+    padding: 6px 10px;
+    text-align: left;
+}
+
+.policy-scroll th {
+    background: rgba(0, 0, 0, 0.05);
+    font-family: 'Fredoka', Arial, sans-serif;
+}
+
+/* Policy Mobile */
+@media (max-width: 767px) {
+    .policy-scroll {
+        max-height: 60vh;
+        padding-right: 4px;
+    }
+
+    .policy-box {
+        padding: var(--spacing-md);
+    }
+}

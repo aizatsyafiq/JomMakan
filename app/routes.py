@@ -1,6 +1,8 @@
 import random
+from pathlib import Path
 from typing import Any, Dict, Tuple
 
+import markdown
 from flask import Blueprint, Response, jsonify, render_template, url_for
 
 # Create blueprint
@@ -95,6 +97,15 @@ def get_random_item(category: str, subcategory: str) -> Tuple[Response, int]:
 def soalan_lazim() -> str:
     """Render FAQ (Frequently Asked Questions) page."""
     return render_template("soalan-lazim.html")
+
+
+@main.route("/pricing-and-policy")
+def pricing_and_policy() -> str:
+    """Render Pricing & Policy page."""
+    policy_path = Path(__file__).parent / "data" / "policy.md"
+    md_text = policy_path.read_text(encoding="utf-8")
+    policy_html = markdown.markdown(md_text, extensions=["tables"])
+    return render_template("pricing-and-policy.html", policy_html=policy_html)
 
 
 @main.route("/sitemap.xml")

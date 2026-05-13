@@ -52,9 +52,14 @@
             <a href="https://forms.gle/DKTRU7JfUznsAPYz8" class="social-btn" id="googleFormBtn" target="_blank">
                 <img src="{{ url_for('static', filename='icons/socmed-google.svg') }}" alt="Google Form">
             </a>
+            <a href="{{ url_for('main.pricing_and_policy') }}" class="social-btn" id="pricingBtn">
+                <img src="{{ url_for('static', filename='icons/policy-page.svg') }}" alt="Pricing & Policy">
+            </a>
         </div>
     </footer>
     
+    {% block scripts %}
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% endblock %}
 </body>
 </html>

@@ -44,10 +44,15 @@ or for development
 ```bash
 pip install -r requirements-dev.txt
 ```
-
+or with uv
+```
+uv pip install -r requirements-dev.txt
+```
 ### 5. Run the Application
 ```bash
 flask run
+or
+python -m flask run
 ```
 
 The app will start and be available at: **http://localhost:5000**
@@ -105,3 +110,7 @@ Choices are fetched from `app/data/foodlist.json` with the following structure:
 **Still having issues?**
 - Check console output for detailed error messages
 - Enable debug mode by setting `DEBUG=True` in `app/.env`
+
+## Privacy Policy
+
+https://www.termsfeed.com/live/cfb6a459-9d26-4c64-b38d-f03e60f56917

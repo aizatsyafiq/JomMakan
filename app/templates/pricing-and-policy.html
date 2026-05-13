@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Pricing & Policy{% endblock %}
+
+{% block scripts %}{% endblock %}
+
+{% block content %}
+<div class="policy-page">
+    <div class="content-box policy-box">
+        <div class="policy-scroll">
+            {{ policy_html | safe }}
+        </div>
+    </div>
+</div>
+{% endblock %}
